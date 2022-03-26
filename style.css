@@ -150,6 +150,7 @@ IMG {
 
     /** 通常時は縦並びにするため[column] */
     flex-direction: column;
+    /** 6vwと指定して可変にし、clampで範囲を指定 */
     gap : clamp(45px, 6vw, 80px);
 
 }
@@ -165,6 +166,7 @@ IMG {
     /** 横幅を1:2にするためそれぞれのflexを指定 */
     .imgtext-container > .text {
         flex: 1;
+        min-width: 17em;
     }
 
     .imgtext-container > .img {
