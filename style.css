@@ -6,6 +6,11 @@ body {
     background-color: #EEE;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+
 IMG {
     display: block;
 }
@@ -47,4 +52,12 @@ IMG {
     /** min関数: 幅を第一引数、最大幅を第二引数に指定する */
     width: min(92%, 1166px);
     margin: auto;
+}
+
+/** ヒーロー */
+.hero {
+    height: 650px;
+    background-image: url(img/hero.jpg);
+    background-position: center;
+    background-size: cover;
 }
