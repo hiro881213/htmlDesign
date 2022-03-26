@@ -147,9 +147,11 @@ IMG {
 
 .imgtext-container {
     display: flex;
-    
+
     /** 通常時は縦並びにするため[column] */
     flex-direction: column;
+    gap : clamp(45px, 6vw, 80px);
+
 }
 
 /** 768pxの時のCSS */
