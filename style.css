@@ -6,6 +6,10 @@ body {
     background-color: #EEE;
 }
 
+IMG {
+    display: block;
+}
+
 /** ヘッダ */
 .header {
     height: 112px;
@@ -26,6 +30,17 @@ body {
     align-items: center;
     height: 100%;
 
+}
+
+/** ナビゲーションボタン */
+.navbtn {
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #AAA;
+    font-size: 30px;
 }
 
 .w-container {
