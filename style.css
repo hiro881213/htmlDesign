@@ -11,3 +11,25 @@ body {
     height: 112px;
     background-color: #FFF;
 }
+
+.header-container {
+    
+    /**flexを指定することでフレックスコンテナに変換する*/
+    display: flex;
+    
+    /** アイテムの横方向の配置 */
+    /** space-between(両端揃え) */
+    justify-content: space-between;
+
+    /** アイテムの縦方向の配置 */
+    /** center(中央揃え) */
+    align-items: center;
+    height: 100%;
+
+}
+
+.w-container {
+    /** min関数: 幅を第一引数、最大幅を第二引数に指定する */
+    width: min(92%, 1166px);
+    margin: auto;
+}
