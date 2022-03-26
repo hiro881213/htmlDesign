@@ -57,7 +57,12 @@ IMG {
 /** ヒーロー */
 .hero {
     height: 650px;
+    /** ↓背景画像を指定 */
     background-image: url(img/hero.jpg);
+    
+    /** ↓画像の中央を切り出す */
     background-position: center;
+    
+    /** ↓<section>に合わせたサイズに調整 */
     background-size: cover;
 }
