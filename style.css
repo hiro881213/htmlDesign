@@ -163,6 +163,10 @@ IMG {
         align-items: center;
     }
 
+    .imgtext-container.reverse {
+        flex-direction: row-reverse;
+    }
+
     /** 横幅を1:2にするためそれぞれのflexを指定 */
     .imgtext-container > .text {
         flex: 1;
