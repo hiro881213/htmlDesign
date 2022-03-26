@@ -138,3 +138,9 @@ IMG {
     /** text-shadow 第一引数: 横オフセット 第二引数: 縦オフセット 第三引数: ブラー 第4引数: 影の色 */
     text-shadow: 0 0 6px #00000052;
 }
+
+/** 画像とテキスト */
+.imgtext {
+    padding: clamp(90px, 9vw, 120px) 0px;
+    background-color: #FFF;
+}
