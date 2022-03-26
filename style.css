@@ -145,6 +145,33 @@ IMG {
     background-color: #FFF;
 }
 
+.imgtext-container {
+    display: flex;
+    
+    /** 通常時は縦並びにするため[column] */
+    flex-direction: column;
+}
+
+/** 768pxの時のCSS */
+@media (min-width: 768px) {
+    .imgtext-container {
+        /** ↓フレックスアイテムを横並びにして縦方向中央に揃えるため */
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /** 横幅を1:2にするためそれぞれのflexを指定 */
+    .imgtext-container > .text {
+        flex: 1;
+    }
+
+    .imgtext-container > .img {
+        flex: 2;
+    }
+}
+
+
+
 .heading-decoration {
     font-size: clamp(30px, 3vw, 40px);
     min-height: 0vw;
