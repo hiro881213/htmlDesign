@@ -8,7 +8,7 @@ body {
     font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, figure {
     margin: 0;
 }
 
@@ -31,6 +31,11 @@ A:hover {
 
 IMG {
     display: block;
+
+    /** max-widthとheightを指定することで横幅に対して、オリジナルの縦横比を維持した高さになるようにする */
+    /** すべてのIMGタグに有効 */
+    max-width: 100%;
+    height: auto;
 }
 
 /** ヘッダ */
