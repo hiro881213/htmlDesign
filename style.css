@@ -218,3 +218,17 @@ IMG {
     padding: var(--v-space) 0;
     background-color: #f3f1ed;
 }
+
+.heading {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(40px, 5.2vw, 70px);
+    min-height: 0vw;
+    font-weight: 300;
+}
+
+.heading SPAN {
+    /** 縦並びにしたいためブロックに設定する */
+    display: block;
+    color: #666;
+    font-size: 18px;
+}
