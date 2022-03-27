@@ -83,6 +83,7 @@ IMG {
     /** min関数: 幅を第一引数、最大幅を第二引数に指定する */
     width: min(92%, 1166px);
     margin: auto;
+    position: relative;
 }
 
 /** ヒーロー */
@@ -220,6 +221,8 @@ IMG {
 }
 
 .heading {
+    position: absolute;
+    top: calc((var(--v-space) + 0.6em) * -1);
     font-family: "Montserrat", sans-serif;
     font-size: clamp(40px, 5.2vw, 70px);
     min-height: 0vw;
