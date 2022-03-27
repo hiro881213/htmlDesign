@@ -235,3 +235,23 @@ IMG {
     color: #666;
     font-size: 18px;
 }
+
+.posts-container {
+    display: grid;
+
+    /** グリッドアイテムを2列に並べる */
+    grid-template-columns: repeat(2, 1fr);
+    
+    /** アイテムの間隔を調整する */
+    /** 第一: 横方向 第二: 縦方向 */
+    gap: 32px 25px;
+}
+
+@media (min-width: 768px) {
+
+    .posts-container {
+        /** repet関数　3,1fr → 1fr 1fr 1fr */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
