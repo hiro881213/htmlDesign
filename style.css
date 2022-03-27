@@ -255,3 +255,24 @@ IMG {
     }
 
 }
+
+/** 記事一覧の記事 */
+.post IMG {
+    /** 縦横比を指定する */
+    aspect-ratio: 3 / 2;
+
+    /** 画像中央を切り出し */
+    object-fit: cover;
+
+    /** aspect-ratioを実行するため必要 */
+    width: 100%;
+}
+
+/** aspect-ratioが使えない場合の処理 */
+@supports not (aspect-ratio: 3 / 2) {
+
+    .post IMG {
+        height: 180px;
+    }
+
+}
