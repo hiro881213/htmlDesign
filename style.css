@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
 /** 基本 */
+
+/** ↓ページ全体で使用できるようにする */
+:root {
+    /** 変数を定義する */
+    --v-space: clamp(90px, 9vw, 120px);
+}
+
+
 body {
     margin : 0;
     background-color: #EEE;
@@ -141,7 +149,8 @@ IMG {
 
 /** 画像とテキスト */
 .imgtext {
-    padding: clamp(90px, 9vw, 120px) 0px;
+    /** var(変数名)で変数の値を取り出す */
+    padding: var(--v-space) 0px;
     background-color: #FFF;
 }
 
@@ -205,3 +214,7 @@ IMG {
     font-size: 18px;
 }
 
+.posts {
+    padding: var(--v-space) 0;
+    background-color: #f3f1ed;
+}
