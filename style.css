@@ -276,3 +276,19 @@ IMG {
     }
 
 }
+
+.post H3 {
+    margin: 1em 0 0 0.5em;
+    font-size: clamp(12px, 2vw, 20px);
+    min-height: 0vw;
+}
+
+.post P {
+    max-width: 20em;
+    font-size: clamp(10px, 1.6vw, 14px);
+    min-height: 0vw;
+}
+
+.post A {
+    display: block;
+}
