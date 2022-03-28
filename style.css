@@ -292,3 +292,19 @@ IMG {
 .post A {
     display: block;
 }
+
+/** フッター */
+.footer {
+    padding: 70px 0;
+    background-color: #FFF;
+    color: #707070;
+    font-size: 13px;
+}
+
+.footer-container {
+    display: grid;
+
+    /** 行間を設定する */
+    gap: 50px;
+    justify-items: center;
+}
