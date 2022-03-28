@@ -16,8 +16,10 @@ body {
     font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure {
+h1, h2, h3, h4, h5, h6, p, figure, ul {
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 P{
@@ -307,4 +309,10 @@ IMG {
     /** 行間を設定する */
     gap: 50px;
     justify-items: center;
+}
+
+.footer-sns {
+    display: flex;
+    gap: 24px;
+    font-size: 24px;
 }
