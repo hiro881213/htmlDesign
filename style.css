@@ -311,6 +311,7 @@ IMG {
     justify-items: center;
 }
 
+/** フッター：SNSメニュー */
 .footer-sns {
     display: flex;
     gap: 24px;
@@ -318,19 +319,39 @@ IMG {
 }
 
 .footer-sns A{
+    /** 縦横中央に配置するために設定 */
     display: grid;
     place-items: center;
     width: 36px;
+
+    /** 画像のアスペクト比を指定する */
     aspect-ratio: 1 / 1;
     background-color: #CCC;
     color: #FFF;
+
+    /** 背景を円形に切り抜く */
     clip-path: circle(50%);
 }
 
  @supports not (aspect-ratio: 1 / 1) {
-
     .footer-sns A {
         height: 36px;
     }
-
  }
+
+/** フッター:　テキストメニュー */
+.footer-menu {
+
+    /** リンクを横並びにする */
+    display: flex;
+
+    /** リンクの間に折り返しが入るようにする */
+    flex-wrap: wrap;
+
+    /** 折り返し時に中央揃えをする */
+    justify-content: center;
+
+    /** リンク間の横幅を調整する */
+    gap: 20px;
+}
+
