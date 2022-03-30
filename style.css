@@ -311,6 +311,21 @@ IMG {
     justify-items: center;
 }
 
+/** グリッド作成 */
+@media (min-width: 768px) {
+    .footer-container {
+        /** グリッドの各列の幅を指定する */
+        grid-template-columns: auto auto;
+
+        /** グリッドの各行の幅を指定する */
+        grid-template-rows: auto auto auto;
+
+        /** 行列の間隔を指定する */
+        gap: 20px;
+    }
+}
+
+
 /** フッター：SNSメニュー */
 .footer-sns {
     display: flex;
