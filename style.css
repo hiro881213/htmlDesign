@@ -323,6 +323,13 @@ IMG {
         /** 行列の間隔を指定する */
         gap: 20px;
     }
+
+    .footer-container > .footer-sns {
+        grid-column: 2;
+        grid-row: 1 / 4;
+    }
+
+
 }
 
 
