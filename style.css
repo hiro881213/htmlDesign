@@ -394,3 +394,9 @@ IMG {
     padding-bottom: var(--v-space);
     background-color: #FFF;
 }
+
+.entry-img img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
