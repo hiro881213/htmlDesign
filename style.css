@@ -405,3 +405,11 @@ IMG {
 .entry .w-container {
     max-width: 720px;
 }
+
+.entry .heading-decoration {
+    font-size: clamb(30px, 6.25vw, 48px);
+}
+
+.entry-container {
+    font-size: clamp(16px, 2.4vw, 18px);
+}
