@@ -426,3 +426,15 @@ IMG {
     /** list-styleもrevertを設定できる */
     list-style: revert;
 }
+
+.entry-container P {
+    margin: 1.8em 0;
+}
+
+.entry-container > :first-child{
+    margin-top: 0;
+}
+
+.entry-container > :last-child {
+    margin-bottom: 0;
+}
