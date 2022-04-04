@@ -413,3 +413,16 @@ IMG {
 .entry-container {
     font-size: clamp(16px, 2.4vw, 18px);
 }
+
+.entry-container 
+/** 複数の適用先をまとめて指定する場合:whereまたは:isを指定する */
+:where(h1, h2, h3, h4, h6, p, figure, ul) {
+
+    /** revertを利用することでブラウザ標準の値を設定できる */
+    margin-top: revert;
+    margin-bottom: revert;
+    padding: revert;
+
+    /** list-styleもrevertを設定できる */
+    list-style: revert;
+}
