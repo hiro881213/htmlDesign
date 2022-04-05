@@ -150,6 +150,10 @@ IMG {
     text-shadow: 0 0 6px #00000052;
 }
 
+.btn-accept{
+    background-color: #B72661;
+}
+
 /** 画像とテキスト */
 .imgtext {
     /** var(変数名)で変数の値を取り出す */
@@ -477,4 +481,8 @@ IMG {
     margin-bottom: 22px;
     font-size: 26px;
     font-weight: bold;
+}
+
+.plan .btn {
+    width: auto;
 }
