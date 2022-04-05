@@ -444,3 +444,20 @@ IMG {
     padding: var(--v-space) 0;
     background-color: #E9E5E9;
 }
+
+.plans-container {
+    display: grid;
+    gap: 27px;
+}
+
+@media (min-width: 768px) {
+    .plans-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.plan {
+    padding: 60px 27px;
+    border-radius: 20px;
+    background-color: #FFF;
+}
