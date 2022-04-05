@@ -464,6 +464,8 @@ IMG {
     padding: 60px 27px;
     border-radius: 20px;
     background-color: #FFF;
+    display: flex;
+    flex-direction: column;
 }
 
 .plan H3 {
@@ -481,6 +483,7 @@ IMG {
     margin-bottom: 22px;
     font-size: 26px;
     font-weight: bold;
+    margin-top: auto;
 }
 
 .plan .btn {
