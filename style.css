@@ -438,3 +438,9 @@ IMG {
 .entry-container > :last-child {
     margin-bottom: 0;
 }
+
+/** プラン */
+.planes {
+    padding: var(--v-space) 0;
+    background-color: #E9E5E9;
+}
