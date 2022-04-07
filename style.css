@@ -89,6 +89,27 @@ IMG {
     font-size: 30px;
 }
 
+.open .navbtn {
+    z-index: 110;
+    color: #FFF;
+}
+
+.navbtn .fa-bars {
+    display: revert;
+}
+
+.open .navbtn .fa-bars {
+    display: none;
+}
+
+.navbtn .fa-times {
+    display: none;
+}
+
+.open .navbtn .fa-times {
+    display: revert;
+}
+
 
 /** ナビゲーションメニュー:モバイル */
 
@@ -103,11 +124,11 @@ IMG {
     .open .nav {
         transform: translate(-100%, 0);
     }
-    .open body {
+    .open BODY {
         position: fixed;
         overflow: hidden;
     }
-    .nav ul {
+    .nav UL {
         display: flex;
         flex-direction: column;
         justify-content: center;
