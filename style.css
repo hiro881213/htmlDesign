@@ -110,6 +110,12 @@ IMG {
     display: revert;
 }
 
+@media (min-width: 768px) {
+    .navbtn {
+        display: none;
+    }
+}
+
 
 /** ナビゲーションメニュー:モバイル */
 
@@ -136,6 +142,17 @@ IMG {
         height: 100%;
         gap: 40px;
         color: #FFF;
+    }
+}
+
+
+/** ナビゲーションメニュー:PC */
+
+@media (min-width: 768px) {
+    .nav UL {
+        display: flex;
+        gap: 40px;
+        color: #707070;
     }
 }
 
