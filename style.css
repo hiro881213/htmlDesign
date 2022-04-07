@@ -2,26 +2,36 @@
 
 /** 基本 */
 
+
 /** ↓ページ全体で使用できるようにする */
+
 :root {
     /** 変数を定義する */
     --v-space: clamp(90px, 9vw, 120px);
 }
 
 body {
-    margin : 0;
+    margin: 0;
     background-color: #EEE;
     color: #222;
     font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, figure, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-P{
+P {
     /** 行の高さを指定する */
     line-height: 1.8;
 }
@@ -40,36 +50,35 @@ A:hover {
 
 IMG {
     display: block;
-
     /** max-widthとheightを指定することで横幅に対して、オリジナルの縦横比を維持した高さになるようにする */
     /** すべてのIMGタグに有効 */
     max-width: 100%;
     height: auto;
 }
 
+
 /** ヘッダ */
+
 .header {
     height: 112px;
     background-color: #FFF;
 }
 
 .header-container {
-    
     /**flexを指定することでフレックスコンテナに変換する*/
     display: flex;
-    
     /** アイテムの横方向の配置 */
     /** space-between(両端揃え) */
     justify-content: space-between;
-
     /** アイテムの縦方向の配置 */
     /** center(中央揃え) */
     align-items: center;
     height: 100%;
-
 }
 
+
 /** ナビゲーションボタン */
+
 .navbtn {
     padding: 0;
     outline: none;
@@ -80,6 +89,27 @@ IMG {
     font-size: 30px;
 }
 
+
+/** ナビゲーションメニュー:モバイル */
+
+@media (max-width: 767px) {
+    .nav {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        background-color: #4E483ae6;
+    }
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 40px;
+        color: #FFF;
+    }
+}
+
 .w-container {
     /** min関数: 幅を第一引数、最大幅を第二引数に指定する */
     width: min(92%, 1166px);
@@ -87,29 +117,27 @@ IMG {
     position: relative;
 }
 
+
 /** ヒーロー */
+
 .hero {
     height: 650px;
     /** ↓背景画像を指定 */
     background-image: url(img/hero.jpg);
-    
     /** ↓画像の中央を切り出す */
     background-position: center;
-
     /** ↓<section>に合わせたサイズに調整 */
     background-size: cover;
-
 }
 
-/** ヒーローエリアのラベル */
-.hero-container {
 
+/** ヒーローエリアのラベル */
+
+.hero-container {
     /** ↓グリッドコンテナに指定する */
     display: grid;
-    
     /** 縦方向を中央に設定する */
     justify-items: center;
-
     /** 横方向を中央に設定する */
     align-content: center;
     height: 100%;
@@ -118,14 +146,12 @@ IMG {
 .hero H1 {
     margin-bottom: 42px;
     font-family: "Montserrat", sans-serif;
-
     /** フォントサイズを可変にする */
     /** clamp 第一引数: 最小値 第二引数: 通常値 第三引数: 最大値 */
     font-size: clamp(48px, 5vw, 68px);
     min-height: 0vw;
     font-weight: 400;
     line-height: 1.3;
-
     /** 行揃えを中央に設定する */
     text-align: center;
 }
@@ -144,55 +170,53 @@ IMG {
     color: #FFF;
     font-size: 18px;
     text-align: center;
-
     /** text-shadow 第一引数: 横オフセット 第二引数: 縦オフセット 第三引数: ブラー 第4引数: 影の色 */
     text-shadow: 0 0 6px #00000052;
 }
 
-.btn-accept{
+.btn-accept {
     background-color: #B72661;
 }
 
+
 /** 画像とテキスト */
+
 .imgtext {
     /** var(変数名)で変数の値を取り出す */
     padding: var(--v-space) 0px;
     background-color: #FFF;
 }
 
-.imgtext + .imgtext {
+.imgtext+.imgtext {
     padding-top: 0;
 }
 
 .imgtext-container {
     display: flex;
-
     /** 通常時は縦並びにするため[column] */
     flex-direction: column;
     /** 6vwと指定して可変にし、clampで範囲を指定 */
-    gap : clamp(45px, 6vw, 80px);
-
+    gap: clamp(45px, 6vw, 80px);
 }
 
+
 /** 768pxの時のCSS */
+
 @media (min-width: 768px) {
     .imgtext-container {
         /** ↓フレックスアイテムを横並びにして縦方向中央に揃えるため */
         flex-direction: row;
         align-items: center;
     }
-
     .imgtext-container.reverse {
         flex-direction: row-reverse;
     }
-
     /** 横幅を1:2にするためそれぞれのflexを指定 */
-    .imgtext-container > .text {
+    .imgtext-container>.text {
         flex: 1;
         min-width: 17em;
     }
-
-    .imgtext-container > .img {
+    .imgtext-container>.img {
         flex: 2;
     }
 }
@@ -200,7 +224,7 @@ IMG {
 .heading-decoration {
     font-size: clamp(30px, 3vw, 40px);
     min-height: 0vw;
-    font-weight: 400;    
+    font-weight: 400;
 }
 
 .heading-decoration::after {
@@ -212,7 +236,7 @@ IMG {
     margin-top: 0.6em;
 }
 
-.heading-decoration + p {
+.heading-decoration+p {
     margin-top: 1em;
     margin-bottom: 2em;
     color: #707070;
@@ -243,43 +267,39 @@ IMG {
 
 .posts-container {
     display: grid;
-
     /** グリッドアイテムを2列に並べる */
     grid-template-columns: repeat(2, 1fr);
-    
     /** アイテムの間隔を調整する */
     /** 第一: 横方向 第二: 縦方向 */
     gap: 32px 25px;
 }
 
 @media (min-width: 768px) {
-
     .posts-container {
         /** repet関数　3,1fr → 1fr 1fr 1fr */
         grid-template-columns: repeat(3, 1fr);
     }
-
 }
 
+
 /** 記事一覧の記事 */
+
 .post IMG {
     /** 縦横比を指定する */
     aspect-ratio: 3 / 2;
-
     /** 画像中央を切り出し */
     object-fit: cover;
-
     /** aspect-ratioを実行するため必要 */
     width: 100%;
 }
 
-/** aspect-ratioが使えない場合の処理 */
-@supports not (aspect-ratio: 3 / 2) {
 
+/** aspect-ratioが使えない場合の処理 */
+
+@supports not (aspect-ratio: 3 / 2) {
     .post IMG {
         height: 180px;
     }
-
 }
 
 .post H3 {
@@ -298,7 +318,9 @@ IMG {
     display: block;
 }
 
+
 /** フッター */
+
 .footer {
     padding: 70px 0;
     background-color: #FFF;
@@ -308,91 +330,82 @@ IMG {
 
 .footer-container {
     display: grid;
-
     /** 行間を設定する */
     gap: 50px;
     justify-items: center;
 }
 
+
 /** グリッド作成 */
+
 @media (min-width: 768px) {
     .footer-container {
         /** グリッドの各列の幅を指定する */
         grid-template-columns: auto auto;
-
         /** グリッドの各行の幅を指定する */
         grid-template-rows: auto auto auto;
-
         /** 行列の間隔を指定する */
         gap: 20px;
     }
-
-    .footer-container > .footer-site {
+    .footer-container>.footer-site {
         margin-bottom: 20px;
     }
-
-    .footer-container > *:not(.footer-sns) {
+    .footer-container>*:not(.footer-sns) {
         justify-self: start;
     }
-
-
-    .footer-container > .footer-sns {
+    .footer-container>.footer-sns {
         grid-column: 2;
         grid-row: 1 / 4;
         justify-self: end;
         align-self: center;
     }
-
-
 }
 
 
 /** フッター：SNSメニュー */
+
 .footer-sns {
     display: flex;
     gap: 24px;
     font-size: 24px;
 }
 
-.footer-sns A{
+.footer-sns A {
     /** 縦横中央に配置するために設定 */
     display: grid;
     place-items: center;
     width: 36px;
-
     /** 画像のアスペクト比を指定する */
     aspect-ratio: 1 / 1;
     background-color: #CCC;
     color: #FFF;
-
     /** 背景を円形に切り抜く */
     clip-path: circle(50%);
 }
 
- @supports not (aspect-ratio: 1 / 1) {
+@supports not (aspect-ratio: 1 / 1) {
     .footer-sns A {
         height: 36px;
     }
- }
-
-/** フッター:　テキストメニュー */
-.footer-menu {
-
-    /** リンクを横並びにする */
-    display: flex;
-
-    /** リンクの間に折り返しが入るようにする */
-    flex-wrap: wrap;
-
-    /** 折り返し時に中央揃えをする */
-    justify-content: center;
-
-    /** リンク間の横幅を調整する */
-    gap: 20px;
-
 }
 
+
+/** フッター:　テキストメニュー */
+
+.footer-menu {
+    /** リンクを横並びにする */
+    display: flex;
+    /** リンクの間に折り返しが入るようにする */
+    flex-wrap: wrap;
+    /** 折り返し時に中央揃えをする */
+    justify-content: center;
+    /** リンク間の横幅を調整する */
+    gap: 20px;
+}
+
+
 /** 記事 */
+
 .entry {
     padding-bottom: var(--v-space);
     background-color: #FFF;
@@ -417,15 +430,14 @@ IMG {
     font-size: clamp(16px, 2.4vw, 18px);
 }
 
-.entry-container 
+.entry-container
 /** 複数の適用先をまとめて指定する場合:whereまたは:isを指定する */
-:where(h1, h2, h3, h4, h6, p, figure, ul) {
 
+:where(h1, h2, h3, h4, h6, p, figure, ul) {
     /** revertを利用することでブラウザ標準の値を設定できる */
     margin-top: revert;
     margin-bottom: revert;
     padding: revert;
-
     /** list-styleもrevertを設定できる */
     list-style: revert;
 }
@@ -434,15 +446,17 @@ IMG {
     margin: 1.8em 0;
 }
 
-.entry-container > :first-child{
+.entry-container> :first-child {
     margin-top: 0;
 }
 
-.entry-container > :last-child {
+.entry-container> :last-child {
     margin-bottom: 0;
 }
 
+
 /** プラン */
+
 .planes {
     padding: var(--v-space) 0;
     background-color: #E9E5E9;
